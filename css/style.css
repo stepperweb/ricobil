@@ -328,6 +328,10 @@ footer p {
     bottom: 30px;
     left: 30px;
     color: #fff;
+    opacity: 0;
+    transition-duration: 0.4s, 1.6s;
+    transition-property: opacity, transform;
+    transition-delay: 0.3s;
     font-weight: 400;
     font-size: 24px;
     line-height:70%;
@@ -347,7 +351,7 @@ footer p {
     font-size: 0.8rem;
     width: 65%;
     opacity: 0;
-    transition-duration: 1s, 1.6s;
+    transition-duration: 0.4s, 1.6s;
     transition-property: opacity, transform;
     transition-delay: 0.3s;
     line-height:150%;
@@ -361,6 +365,10 @@ footer p {
     transition-duration: 2.3s ;
     transition-property: opacity;
     transition-delay: 1.3s;
+  }
+
+  .slide_m.swiper-slide-active .default_p{
+    opacity: 1;
   }
 
   .slide_m.swiper-slide-active h3{
