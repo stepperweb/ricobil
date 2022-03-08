@@ -195,7 +195,7 @@ footer p {
 
 .slide.active .slide_in h3 {
   opacity: 1;
-  transition: opacity 2.3s ease-in 0.2s;
+  transition: opacity 2s ease-in 0.2s;
 }
 
 .slide.active .slide_in h4,
@@ -341,13 +341,35 @@ footer p {
   .slide_m .content_p{
     position: absolute;
     bottom: 6%;
-    left: 15%;
+    left: 25%;
     color: #fff;
     font-weight: 400;
     font-size: 0.8rem;
     width: 65%;
+    opacity: 0;
+    transition-duration: 1s, 1.6s;
+    transition-property: opacity, transform;
+    transition-delay: 0.3s;
     line-height:150%;
     word-break: keep-all;
+  }
+
+  .slide_m h3{
+    opacity: 0;
+    font-size: 23vw;
+    color: rgba(255,255,255,0.6);
+    transition-duration: 2.3s ;
+    transition-property: opacity;
+    transition-delay: 1.3s;
+  }
+
+  .slide_m.swiper-slide-active h3{
+    opacity: 1;
+  }
+
+  .slide_m.swiper-slide-active .content_p{
+    opacity: 1;
+    left: 15%;
   }
 
   .slide_m .content_p h4{
@@ -401,10 +423,6 @@ footer p {
     content:"0";
   }
 
-  .slide_m h3{
-    font-size: 20vw;
-    color: rgba(255,255,255,0.6)
-  }
  .pagination_container{
    width: 70px;
    height: 20px;
