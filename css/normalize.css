@@ -22,7 +22,10 @@ html {
 
 body {
   margin: 0;
+  font-family: 나눔스퀘어, 'NanumSquare', sans-serif;
 }
+
+
 
 /**
  * Render the `main` element consistently in IE.
