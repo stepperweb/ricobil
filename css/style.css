@@ -66,6 +66,7 @@ footer p {
   font-weight: 300;
   font-size: 12px;
   line-height: 150%;
+  color: rgba(255,255,255, 0.7)
 }
 
 .main_wrapper{
@@ -89,7 +90,7 @@ footer p {
   width: 100%;
   height: 100vh;
   display: flex;
-  cursor: pointer;
+  cursor: default;
   flex: 2;
   justify-content: center;
   color: #fff;
@@ -113,7 +114,7 @@ footer p {
   justify-content: center;
   align-items: center;
   filter: brightness(0.3);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .slide_in + .icon {
@@ -128,42 +129,68 @@ footer p {
   font-weight: 800;
   font-size: 8.5vw;
   color: rgba(255, 255, 255, 0.7);
+  transform: translateX(150%);
 }
 
 .slide_in h4.default_p{
   position: absolute;
   bottom: 160px;
   opacity: 0;
+  transform: translateY(100px);
   left: 103px;
   font-weight: 400;
   font-size: 34px;
   line-height:160%;
+  overflow: hidden;
 }
 
-.slide_in .content_p{
-  width: 400px;
+/*.slide_in .content_p{*/
+/*  width: 400px;*/
+/*  position: absolute;*/
+/*  bottom: 10%;*/
+/*  opacity: 0;*/
+/*  right: 0;*/
+/*  text-align: left;*/
+/*  word-break: keep-all;*/
+/*}*/
+
+.slide .slide_in .content_p {
+  width: 23vw;
   position: absolute;
   bottom: 10%;
-  opacity: 0;
   right: 0;
   text-align: left;
+  overflow: hidden;
   word-break: keep-all;
 }
 
 .slide_in .content_p h4{
+  opacity: 0;
+  transform: translateY(100px);
   font-size: 36px;
   font-weight: bold;
   margin: 0;
 }
 
 .slide_in .content_p p {
-  width: 360px;
+  opacity: 0;
+  transform: translateY(100px);
+  width: 480px;
   word-break: keep-all;
-  font-size: 1.1rem;
-  line-height: 150%;
+  font-size: 1rem;
+  line-height: 70%;
 }
 
+/*.slide_in .content_p p {*/
+/*  width: 360px;*/
+/*  word-break: keep-all;*/
+/*  font-size: 1rem;*/
+/*  line-height: 150%;*/
+/*}*/
+
 .slide_in .content_p .line{
+  opacity: 0;
+  transform: translateX(100%);
   display: inline-block;
   width: 100%;
   height: 2px;
@@ -193,15 +220,51 @@ footer p {
   opacity: 0;
 }
 
-.slide.active .slide_in h3 {
+.slide.active .default_p {
   opacity: 1;
-  transition: opacity 2s ease-in 0.2s;
+  transform: translateX(0%);
+  transition-duration: 0.2s, 0.8s;
+  transition-property: opacity, transform;
+  transition-delay: 0.3s;
 }
 
-.slide.active .slide_in h4,
-.slide.active .slide_in .content_p{
+.slide.active .slide_in h3 {
   opacity: 1;
-  transition: opacity 0.2s ease-in 0.2s;
+  transform: translateX(0%);
+  transition-duration: 0.2s, 0.8s;
+  transition-property: opacity, transform;
+  transition-delay: 0.3s;
+}
+
+/*.slide.active .slide_in h4,*/
+/*.slide.active .slide_in .content_p{*/
+/*  opacity: 1;*/
+/*  transition: opacity 0.2s ease-in 0.2s;*/
+/*  transition-delay: 0.6s;*/
+/*}*/
+
+.slide.active .slide_in .content_p h4{
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.6s, 1.6s;
+  transition-property: opacity, transform;
+  transition-delay: 1.2s;
+}
+
+.slide.active .slide_in .content_p .line{
+  opacity: 1;
+  transform: translateX(0);
+  transition-duration: 0.6s, 0.6s;
+  transition-property: opacity, transform;
+  transition-delay: 2s;
+}
+
+.slide.active .slide_in .content_p p{
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.8s, 1.6s;
+  transition-property: opacity, transform;
+  transition-delay: 1.2s;
 }
 
 .swiper{
@@ -293,7 +356,6 @@ footer p {
   header .nav_hamburger{
     display: block;
   }
-
 
   .slide .slide_in + .icon{
     display: none;
@@ -480,4 +542,16 @@ footer p {
 
 .currentClass{
   color: #fff;
+}
+
+
+
+/* animation*/
+@-webkit-keyframes fadeInUp {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
 }

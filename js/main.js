@@ -4,7 +4,7 @@ function slidesPlugin(activeSlide = 0) {
   slides[activeSlide].classList.add("active");
 
   for (const slide of slides) {
-    slide.addEventListener("click", () => {
+    slide.addEventListener("mouseenter", () => {
       clearActiveClasses();
 
       slide.classList.add("active");
