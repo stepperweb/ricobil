@@ -120,7 +120,36 @@ footer p {
 .slide_in + .icon {
   position: absolute;
   top: 50%;
+  animation: blinker 2s linear infinite;
+  animation: blinker_white 2.5s linear infinite;
 }
+
+@keyframes blinker_white {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.1;
+  }
+}
+/*.blink {*/
+
+/*  animation: blink-effect 1s step-end infinite;*/
+/*  !* animation-name: blink-effect; animation-duration: 1s;*/
+/*  animation-iteration-count:infinite;*/
+/*  animation-timing-function:step-end; *!*/
+/*}*/
+
 
 .slide_in h3 {
   position: absolute;
@@ -218,6 +247,7 @@ footer p {
 
 .slide.active .slide_in + .icon{
   opacity: 0;
+  animation: none;
 }
 
 .slide.active .default_p {
@@ -231,7 +261,7 @@ footer p {
 .slide.active .slide_in h3 {
   opacity: 1;
   transform: translateX(0%);
-  transition-duration: 0.2s, 0.8s;
+  transition-duration: 0.2s, 0.4s;
   transition-property: opacity, transform;
   transition-delay: 0.3s;
 }
@@ -411,13 +441,15 @@ footer p {
     color: #fff;
     font-weight: 400;
     font-size: 0.8rem;
-    width: 65%;
+    width: 75%;
     opacity: 0;
+    transform: translateY(100px);
     transition-duration: 0.4s, 1.6s;
     transition-property: opacity, transform;
     transition-delay: 0.3s;
-    line-height:150%;
+    line-height:60%;
     word-break: keep-all;
+    overflow: hidden;
   }
 
   .slide_m h3{
@@ -427,6 +459,7 @@ footer p {
     transition-duration: 2.3s ;
     transition-property: opacity;
     transition-delay: 1.3s;
+    transform: translateX(150%);
   }
 
   .slide_m.swiper-slide-active .default_p{
@@ -435,18 +468,26 @@ footer p {
 
   .slide_m.swiper-slide-active h3{
     opacity: 1;
+    transform: translateX(0);
+    transition-duration: 0.2s, 0.4s;
+    transition-property: opacity, transform;
+    transition-delay: 0.3s;
   }
 
   .slide_m.swiper-slide-active .content_p{
     opacity: 1;
     left: 15%;
+    transform: translateY(0);
+    transition-duration: 0.8s, 1.6s;
+    transition-property: opacity, transform;
+    transition-delay: 1.2s;
   }
 
   .slide_m .content_p h4{
     font-size: 30px;
     width: 130%;
     font-weight: bold;
-    margin: 0 0 20px 0;
+    margin: 10px 0 20px 0;
   }
 
   .slide_m .content_p h4 .line{
