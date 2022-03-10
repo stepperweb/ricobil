@@ -251,13 +251,17 @@ footer p {
 
 .slide_in h4 p {
   margin: 0;
-  font-weight: 300;
+  font-weight: 100;
   letter-spacing: 1px;
 }
 
 .slide_in h4 .bold{
   font-weight: 700;
   display: inline-block;
+}
+
+.slide_in .default_p > span.hr{
+  font-weight: 100 !important;
 }
 
 .slide_in h4 .sizeUp{
