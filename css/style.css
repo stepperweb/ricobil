@@ -229,10 +229,9 @@ footer p {
   font-style: normal;
   word-break: keep-all;
   font-size: 0.875rem;
-  line-height: 70%;
+  line-height: 1px;
   font-family: 'NanumSquare';
-  font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /*.slide_in .content_p p {*/
@@ -302,9 +301,9 @@ footer p {
 .slide.active .slide_in h3 {
   opacity: 1;
   transform: scale(1);
-  transition-duration: 0.2s, 1.6s;
+  transition-duration: 0.2s, 0.4s;
   transition-property: opacity, transform;
-  transition-delay: 0.9s;
+  transition-delay: 0.3s;
 }
 
 /*.slide.active .slide_in h4,*/
