@@ -301,7 +301,7 @@ footer p {
 .slide.active .slide_in h3 {
   opacity: 1;
   transform: scale(1);
-  transition-duration: 0.2s, 0.4s;
+  transition-duration: 0.2s, 0.8s;
   transition-property: opacity, transform;
   transition-delay: 0.3s;
 }
